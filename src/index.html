@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <title>GOST test</title>
+</head>
+<body>
+  <main>
+    <form>
+      <label>
+        Название объявления
+        <input class="title" type="text" name="title">
+      </label>
+      <label>
+        Описание
+        <textarea class="description" name="description" rows="3"></textarea>
+      </label>
+      <label>
+        ОКС
+        <select name="select" class="select" size="5" multiple></select>
+      </label>
+      <span class="invalid-message">Для размещения объявления, выберите хотя бы один раздел ОКС</span>
+      <div class="button__wrapper">
+        <button class="submit" type="submit">Разместить объявление</button>
+        <button class="search" type="button">Подобрать ОКС на основе текста объявления</button>
+      </div>
+    </form>
+    <ul class="list"></ul>
+    <span class="total-price"></span>
+    <div class="modal">
+      <div class="modal__wrapper">
+        <span class="modal__message"></span>
+        <button class="modal__button" type="button">Закрыть</button>
+      </div>
+    </div>
+  </main>
+  <template id="option">
+    <option class="select__option"></option>
+  </template>
+  <template id="list__item">
+    <li class="list__item item">
+      <span class="item__code"></span>
+      <span class="item__name"></span>
+      <span class="item__price"></span>
+      <button class="item__button" type="button">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M2.84025 2.84031C3.07168 2.60889 3.44688 2.60889 3.67831 2.84031L8.00004 7.16205L12.3217 2.84035C12.5532 2.60893 12.9284 2.60893 13.1598 2.84035C13.3912 3.07177 13.3912 3.44698 13.1598 3.67841L8.83809 8.0001L13.1597 12.3218C13.3912 12.5532 13.3912 12.9284 13.1597 13.1598C12.9283 13.3912 12.5531 13.3912 12.3217 13.1598L8.00004 8.83815L3.67835 13.1598C3.44692 13.3913 3.07172 13.3913 2.84029 13.1598C2.60887 12.9284 2.60887 12.5532 2.84029 12.3218L7.16199 8.0001L2.84025 3.67837C2.60883 3.44694 2.60883 3.07174 2.84025 2.84031Z" fill="currentColor"/>
+        </svg>
+      </button>
+    </li>
+  </template>
+  <script src="./js/main.js" type="module"></script>
+</body>
+</html>
