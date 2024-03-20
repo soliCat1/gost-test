@@ -95,8 +95,21 @@ const searchButtonClickHandler = () => {
   searchOks(request, findResults)
 }
 
+const searchClickHandler = () => {
+  const result = [];
+  var options = select.options;
+  for (var i=0; i < options.length; i++) {
+    if (options[i].selected) {
+      result.push(createOptionObject(options[i]));
+    }
+  }
+  checkedOptions = result
+  createOptions()
+}
+
 const initSearch = () => {
   searchButton.addEventListener('click', searchButtonClickHandler)
+  select.addEventListener('click', searchClickHandler)
 }
 
 export {initSearch}

@@ -104,7 +104,6 @@ const searchClickHandler = () => {
     }
   }
   checkedOptions = result
-  console.log(checkedOptions)
   createOptions()
 }
 
